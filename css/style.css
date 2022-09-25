@@ -218,10 +218,9 @@ body {
 }
 
 .page__scroll-to-top {
+  display: none;
   cursor: pointer;
   position: fixed;
-  display: -ms-grid;
-  display: grid;
   place-content: center;
   border-radius: 8px;
   height: 50px;
@@ -233,6 +232,11 @@ body {
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
   background-color: rgb(61, 23, 105);
+}
+
+.page__scroll-to-top._active {
+  display: -ms-grid;
+  display: grid;
 }
 
 .page__static-page {
