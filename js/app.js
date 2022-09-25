@@ -532,6 +532,11 @@
             }));
         }
     }), 0);
+    const scroller = document.querySelector(".page__scroll-to-top");
+    console.log(scroller);
+    document.addEventListener("scroll", (() => {
+        window.pageYOffset > 500 ? scroller.classList.add("_active") : scroller.classList.remove("_active");
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
